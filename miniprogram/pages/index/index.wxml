@@ -4,31 +4,31 @@
     <text class="title">请输入当前属性</text>
     <view class="item">
       <text>暴击率：</text>
-      <input id="bjl" value="{{bjl}}" bind:change="onInputChange" />
+      <input type="digit" id="bjl" value="{{bjl}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>暴击伤害：</text>
-        <input id="bjsh" value="{{bjsh}}" bind:change="onInputChange" />
+        <input type="digit" id="bjsh" value="{{bjsh}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>属强：</text>
-        <input id="sq" value="{{sq}}" bind:change="onInputChange" />
+        <input type="digit" id="sq" value="{{sq}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>伤害提升：</text>
-        <input id="shts" value="{{shts}}" bind:change="onInputChange" />
+        <input type="digit" id="shts" value="{{shts}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>技能伤害：</text>
-        <input id="jnsh" value="{{jnsh}}" bind:change="onInputChange" />
+        <input type="digit" id="jnsh" value="{{jnsh}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>boss伤害：</text>
-        <input id="boss" value="{{boss}}" bind:change="onInputChange" />
+        <input type="digit" id="boss" value="{{boss}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>克制异常：</text>
-        <input id="kzyc" value="{{kzyc}}" bind:change="onInputChange" />
+        <input type="digit" id="kzyc" value="{{kzyc}}" bind:change="onInputChange" />
     </view>
   </view>
   <view class="container">
@@ -42,31 +42,31 @@
     <text class="title">请输入调整后的属性</text>
     <view class="item">
       <text>暴击率：</text>
-      <input id="bjlAfter" value="{{bjlAfter}}" bind:change="onInputChange" />
+      <input type="digit" id="bjlAfter" value="{{bjlAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>暴击伤害：</text>
-        <input id="bjshAfter" value="{{bjshAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="bjshAfter" value="{{bjshAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>属强：</text>
-        <input id="sqAfter" value="{{sqAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="sqAfter" value="{{sqAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>伤害提升：</text>
-        <input id="shtsAfter" value="{{shtsAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="shtsAfter" value="{{shtsAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>技能伤害：</text>
-        <input id="jnshAfter" value="{{jnshAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="jnshAfter" value="{{jnshAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>boss伤害：</text>
-        <input id="bossAfter" value="{{bossAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="bossAfter" value="{{bossAfter}}" bind:change="onInputChange" />
     </view>
     <view class="item">
         <text>克制异常：</text>
-        <input id="kzycAfter" value="{{kzycAfter}}" bind:change="onInputChange" />
+        <input type="digit" id="kzycAfter" value="{{kzycAfter}}" bind:change="onInputChange" />
     </view>
   </view>
   <view class="container">
