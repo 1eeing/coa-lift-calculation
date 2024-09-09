@@ -1,10 +1,21 @@
 /**app.wxss**/
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  padding: 200rpx 0;
+  padding: 20rpx 12rpx;
   box-sizing: border-box;
-} 
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  font-size:16px;
+  font-weight: bold;
+}
+
+.lift {
+  color: red;
+  font-weight: 500;
+}

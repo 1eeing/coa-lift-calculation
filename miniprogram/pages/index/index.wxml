@@ -1,27 +1,76 @@
 <!--index.wxml-->
 <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
-    <view class="userinfo">
-      <block wx:if="{{canIUseNicknameComp && !hasUserInfo}}">
-        <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
-          <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
-        </button>
-        <view class="nickname-wrapper">
-          <text class="nickname-label">昵称</text>
-          <input type="nickname" class="nickname-input" placeholder="请输入昵称" bind:change="onInputChange" />
-        </view>
-      </block>
-      <block wx:elif="{{!hasUserInfo}}">
-        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-        <view wx:else> 请使用2.10.4及以上版本基础库 </view>
-      </block>
-      <block wx:else>
-        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </block>
+    <text class="title">请输入当前属性</text>
+    <view class="item">
+      <text>暴击率：</text>
+      <input id="bjl" value="{{bjl}}" bind:change="onInputChange" />
     </view>
-    <view class="usermotto">
-      <text class="user-motto">{{motto}}</text>
+    <view class="item">
+        <text>暴击伤害：</text>
+        <input id="bjsh" value="{{bjsh}}" bind:change="onInputChange" />
     </view>
+    <view class="item">
+        <text>属强：</text>
+        <input id="sq" value="{{sq}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>伤害提升：</text>
+        <input id="shts" value="{{shts}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>技能伤害：</text>
+        <input id="jnsh" value="{{jnsh}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>boss伤害：</text>
+        <input id="boss" value="{{boss}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>克制异常：</text>
+        <input id="kzyc" value="{{kzyc}}" bind:change="onInputChange" />
+    </view>
+  </view>
+  <view class="container">
+    <view class="title">一键复制属性</view>
+    <view class="item">
+      <button bindtap="bindTopdown">↓</button>
+      <button bindtap="bindBottomup">↑</button>
+    </view>
+  </view>
+  <view class="container">
+    <text class="title">请输入调整后的属性</text>
+    <view class="item">
+      <text>暴击率：</text>
+      <input id="bjlAfter" value="{{bjlAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>暴击伤害：</text>
+        <input id="bjshAfter" value="{{bjshAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>属强：</text>
+        <input id="sqAfter" value="{{sqAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>伤害提升：</text>
+        <input id="shtsAfter" value="{{shtsAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>技能伤害：</text>
+        <input id="jnshAfter" value="{{jnshAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>boss伤害：</text>
+        <input id="bossAfter" value="{{bossAfter}}" bind:change="onInputChange" />
+    </view>
+    <view class="item">
+        <text>克制异常：</text>
+        <input id="kzycAfter" value="{{kzycAfter}}" bind:change="onInputChange" />
+    </view>
+  </view>
+  <view class="container">
+      <view class="lift">提升率：{{ res }}</view>
+      <button type="primary" bindtap="onOk">计算</button>
   </view>
 </scroll-view>
